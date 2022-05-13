@@ -4,36 +4,48 @@ import { NavLink } from "react-router-dom";
 import classes from "./NavLinks.module.scss";
 
 const NavLinks = (props) => {
-  const activeStyle = {
-    color: "white",
-    backgroundColor: "#f8df00",
-    borderColor: "#292929",
-  };
+ 
   return (
     <ul className={classes["nav-links"]}>
       <li>
         <NavLink
-          style={(isActive) => (isActive ? activeStyle : "undefined")}
           to="/"
-          end
+          className={({ isActive }) =>
+            isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
+          }
         >
           All Users
         </NavLink>
       </li>
       <li>
         <NavLink
-          style={(isActive) => (isActive ? activeStyle : "undefined")}
-          to="u1/places"
-          end
+          to="myplace"
+          className={({ isActive }) =>
+            isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
+          }
         >
           My Places
         </NavLink>
       </li>
       <li>
-        <NavLink to="places/new">Add Place</NavLink>
+        <NavLink
+          to="addplace"
+          className={({ isActive }) =>
+            isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
+          }
+        >
+          Add Place
+        </NavLink>
       </li>
       <li>
-        <NavLink to="auth">Authenticate</NavLink>
+        <NavLink
+          to="auth"
+          className={({ isActive }) =>
+            isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
+          }
+        >
+          Authenticate
+        </NavLink>
       </li>
     </ul>
   );

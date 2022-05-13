@@ -34,7 +34,7 @@ const MainNavigation = (props) => {
           <span />
         </button>
         <h1 className="main-navigation__title">
-          <Link to="/">ShareSpace</Link>
+          <Link to="/">ACA Capstone</Link>
         </h1>
         <nav className="main-navigation__header-nav">
           <NavLinks />
