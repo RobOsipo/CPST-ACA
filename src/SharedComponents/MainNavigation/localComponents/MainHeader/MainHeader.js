@@ -1,9 +1,9 @@
 import React from 'react'
-import './MainHeader.css'
+import classes from './MainHeader.module.css'
 
 const MainHeader = (props) => {
   return (
-    <header className="main-header">
+    <header className={classes['main-header']}>
         {props.children}
     </header>
   )
