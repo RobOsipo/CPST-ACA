@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Modal from '../Modal/Modal'
+import Modal from './localComponents/Modal/Modal'
 import './DisplayModal.css'
 
 const DisplayModal = (props) => {
@@ -23,7 +23,8 @@ const DisplayModal = (props) => {
         footerClass="place-item__modal-actions"
         footer={<button onClick={closeMapHandler}>Close</button>}
       >
-          <div className="map-container">
+          <div className="content-container">
+          {/* //todo-- maybe pass a component as a prop to render inside modal so It can truly be reusable  */}
               <h2>Some Stuff Here</h2>
           </div>
       </Modal>

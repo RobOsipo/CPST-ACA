@@ -1,10 +1,14 @@
 import React from 'react'
 
-
+import './Dummy.css'
 const DummyPage = () => {
   return (
     <>
-    <div>DummyPage</div>
+   
+    <div className="dummy">
+      <h1>Dummy</h1>
+     
+    </div>
     
 
     </>

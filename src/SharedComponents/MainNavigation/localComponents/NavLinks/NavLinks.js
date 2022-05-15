@@ -9,12 +9,12 @@ const NavLinks = (props) => {
     <ul className={classes["nav-links"]}>
       <li>
         <NavLink
-          to="/"
+          to="/afterlogin"
           className={({ isActive }) =>
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
         >
-          All Users
+          Page One
         </NavLink>
       </li>
       <li>
@@ -24,7 +24,7 @@ const NavLinks = (props) => {
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
         >
-          My Places
+          Page Two
         </NavLink>
       </li>
       <li>
@@ -34,10 +34,10 @@ const NavLinks = (props) => {
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
         >
-          Add Place
+          Page Three
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink
           to="auth"
           className={({ isActive }) =>
@@ -46,7 +46,7 @@ const NavLinks = (props) => {
         >
           Authenticate
         </NavLink>
-      </li>
+      </li> */}
     </ul>
   );
 };
