@@ -1,0 +1,35 @@
+
+
+.form-container {
+    // height: 50%;
+    width: 70vw;
+    background-color: rgb(75, 74, 74);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.input {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button {
+    margin-top: 1rem;
+}
+
+.textarea {
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.label {
+    font-size: 1rem;
+    margin: 1rem;
+}

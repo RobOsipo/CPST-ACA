@@ -6,6 +6,7 @@ import DummyPage from '../pages/DummyPage/DummyPage';
 import Register from '../pages/Register/Register'
 import Login from '../pages/Login/Login'
 import Choose from '../pages/Choose/Choose'
+import Compose from '../pages/Compose/Compose'
 import classes from './App.module.scss'
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <Route path="/login" element={<Login />} />
 
       <Route path="/choose" element={<Choose />} />
-      <Route path="/compose" element={<DummyPage />} />
+      <Route path="/compose" element={<Compose />} />
       <Route path="/read" element={<DummyPage />} />
       
       {/* <Navigate to="/" /> */}

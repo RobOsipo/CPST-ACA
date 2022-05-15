@@ -1,0 +1,9 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+/*# sourceMappingURL=Compose.module.css.map */

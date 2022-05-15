@@ -27,7 +27,7 @@ const NavLinks = (props) => {
           Page Two
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink
           to="play"
           className={({ isActive }) =>
@@ -36,7 +36,7 @@ const NavLinks = (props) => {
         >
           Page Three
         </NavLink>
-      </li>
+      </li> */}
       {/* <li>
         <NavLink
           to="auth"
