@@ -9,7 +9,7 @@ const NavLinks = (props) => {
     <ul className={classes["nav-links"]}>
       <li>
         <NavLink
-          to="/afterlogin"
+          to="/compose"
           className={({ isActive }) =>
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
@@ -19,7 +19,7 @@ const NavLinks = (props) => {
       </li>
       <li>
         <NavLink
-          to="myplace"
+          to="/read"
           className={({ isActive }) =>
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
@@ -29,7 +29,7 @@ const NavLinks = (props) => {
       </li>
       <li>
         <NavLink
-          to="addplace"
+          to="play"
           className={({ isActive }) =>
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }

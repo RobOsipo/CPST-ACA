@@ -4,14 +4,28 @@ import FormInput from '../../SharedComponents/FormInput/FormInput'
 
 
 import classes from './Login.module.css'
-
 const Login = () => {
   return (
-    <div className={classes.dummy}>
-        <h1>Login Page</h1>
-        <FormInput navigateTo="/afterlogin" buttonText="Login" linkTo="/" linkText="I Need To Register Still!" />
-
-    </div>
+      <div className={classes.area}>
+       <ul className={classes.circles}>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        <main className={classes['main-container']}>
+            
+        <div className={classes['input-container']}>  <FormInput buttonText="Login" navigateTo="/choose"  linkTo="/" linkText=" I Still Need To Register!" /> </div>
+            
+        </main>
+      </div>
   )
 }
 

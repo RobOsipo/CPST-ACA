@@ -2,33 +2,32 @@ import React, {useState} from 'react'
 import Modal from './localComponents/Modal/Modal'
 import './DisplayModal.css'
 
-const DisplayModal = (props) => {
+const DisplayModal = ({setShowModal, showModal, component: Component}) => {
 
  
 
   const openMapHandler = () => {
-    props.setShowModal(true);
+   setShowModal(true);
   };
 
   const closeMapHandler = () => {
-    props.setShowModal(false);
+    setShowModal(false);
   };
   return (
     <>
            <Modal
-        show={props.showModal}
+        show={showModal}
         onCancel={closeMapHandler}
-        header="Header Goes Here"
         contentClass="place-item__modal-content"
         footerClass="place-item__modal-actions"
-        footer={<button onClick={closeMapHandler}>Close</button>}
+        footer={<button className="modal__btn" onClick={closeMapHandler}>Close</button>}
       >
           <div className="content-container">
           {/* //todo-- maybe pass a component as a prop to render inside modal so It can truly be reusable  */}
-              <h2>Some Stuff Here</h2>
+              <Component />
           </div>
       </Modal>
-      <button onClick={openMapHandler}>Click This To Open Modal</button>
+      
     </>
   )
 }
