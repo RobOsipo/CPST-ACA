@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import DisplayModal from '../../../../SharedComponents/DisplayModal/DisplayModal'
-import Dictionary from './Components/Dictionary/Dictionary'
+import Dictionary from './localComponents/Dictionary/Dictionary'
 import classes from './ComposeForm.module.scss'
 
 const ComposeForm = () => {

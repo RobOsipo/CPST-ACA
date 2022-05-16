@@ -5,6 +5,7 @@
   color: #fff;
   background: transparent;
   border: none;
+  margin-top: 2.5px;
 }
 
 @media (min-width: 768px) {
@@ -15,13 +16,13 @@
 
 @media (min-width: 1024px) {
   .openDictionary {
-    left: 30rem;
+    left: 45rem;
   }
 }
 
 @media (min-width: 1280px) {
   .openDictionary {
-    left: 35rem;
+    left: 57rem;
   }
 }
 
@@ -32,7 +33,6 @@
 
 .form-container {
   width: 70vw;
-  background-color: #4b4a4a;
   background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(#1d1d1d));
   background-image: linear-gradient(to right, #434343 0%, #1d1d1d 100%);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;

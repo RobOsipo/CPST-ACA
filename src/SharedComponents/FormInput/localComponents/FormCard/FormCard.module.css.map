@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,gBAAgB,EAAE,OAAY;EAC9B,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,aAAa,EAAE,IAAI;CACtB",
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,gBAAgB,EAAE,OAAY;EAE9B,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,aAAa,EAAE,IAAI;CACtB",
     "sources": [
         "FormCard.module.scss"
     ],

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import MainNavigation from '../../SharedComponents/MainNavigation/MainNavigation'
 import DisplayModal from '../../SharedComponents/DisplayModal/DisplayModal'
-import WordGame from './localComponents/WordGame/WordGame'
+import WordGame from './Components/WordGame/WordGame'
 
 import classes from './Choose.module.scss'
 

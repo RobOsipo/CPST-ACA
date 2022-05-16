@@ -1,7 +1,7 @@
 
 import React from 'react'
 import FormInput from '../../SharedComponents/FormInput/FormInput'
-import LogoDrop from './localComponents/LogoDrop/LogoDrop'
+import LogoDrop from './Components/LogoDrop/LogoDrop'
 
 import classes from './Register.module.css'
 

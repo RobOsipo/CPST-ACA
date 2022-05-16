@@ -1,7 +1,7 @@
 import React from 'react'
 
 import MainNavigation from '../../SharedComponents/MainNavigation/MainNavigation'
-import ComposeForm from './localComponents/ComposeForm/ComposeForm'
+import ComposeForm from './Components/ComposeForm/ComposeForm'
 import classes from './Compose.module.scss'
 
 const Compose = () => {
