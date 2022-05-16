@@ -1,7 +1,8 @@
 .activeStyle {
-  background: #f8df00;
+  background: #fff;
   border-color: #292929;
   color: #292929;
+  border-radius: 0px;
 }
 
 .nav-links {
@@ -39,7 +40,7 @@
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
-  background: #f8df00;
+  background: #fff;
   border-color: #292929;
   color: #292929;
 }

@@ -1,0 +1,86 @@
+
+
+.post {
+    min-height: 7rem;
+    max-height: 20rem;
+    border-radius: 10px;
+    width: 30rem;
+    margin: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: solid black 2px;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        cursor: pointer
+    }
+}
+
+.title {
+    text-align: center;
+    color: white;
+}
+.close-and-delete {
+    width: 18rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.openButton {
+    background-color: rgb(0, 0, 0);
+    border: solid #fff 2px;
+    background: transparent;
+    color: white;
+    width: 10rem;
+    margin: 0 auto;
+    height: 2.5rem;
+    border-radius: 10px;
+    transition: 0.70s;
+    -webkit-transition: 0.70s;
+    -moz-transition: 0.70s;
+    -ms-transition: 0.70s;
+    -o-transition: 0.70s;
+    &:hover {
+        background-color: #fff;
+        color:rgb(100, 100, 100);
+        cursor: pointer;
+        transition: 0.70s;
+      -webkit-transition: 0.70s;
+      -moz-transition: 0.70s;
+      -ms-transition: 0.70s;
+      -o-transition: 0.70s;
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+
+.closeButton {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.deleteButton {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+

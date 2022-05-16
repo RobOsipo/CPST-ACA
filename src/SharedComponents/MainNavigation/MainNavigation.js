@@ -5,7 +5,9 @@ import MainHeader from "./localComponents/MainHeader/MainHeader";
 import NavLinks from "./localComponents/NavLinks/NavLinks";
 import SideDrawer from "./localComponents/SideDrawer/SideDrawer";
 import Backdrop from './localComponents/Backdrop/Backdrop'
+import Logostache from '../../icons/LogoStache/LogoStache'
 import "./MainNavigation.css";
+
 
 const MainNavigation = (props) => {
     const [drawerIsOpen, setDrawerIsOpen] = useState(false)
@@ -33,9 +35,12 @@ const MainNavigation = (props) => {
           <span />
           <span />
         </button>
-        <h1 className="main-navigation__title">
-          <Link to="/">ACA Capstone</Link>
+        <span className="navigation__span"><h1 className="main-navigation__title">
+          <Link to="/choose">Post-It</Link>
+          
+          
         </h1>
+        <Logostache width={40} height={40} customClass="white-logo" /></span>
         <nav className="main-navigation__header-nav">
           <NavLinks />
         </nav>

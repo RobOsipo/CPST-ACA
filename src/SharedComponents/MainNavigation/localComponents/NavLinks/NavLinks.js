@@ -14,7 +14,7 @@ const NavLinks = (props) => {
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
         >
-          Page One
+          Compose Post
         </NavLink>
       </li>
       <li>
@@ -24,7 +24,7 @@ const NavLinks = (props) => {
             isActive ? `${classes.activeStyle}` : `${classes["nav-link"]}`
           }
         >
-          Page Two
+          Read Post
         </NavLink>
       </li>
       {/* <li>

@@ -1,9 +1,10 @@
 .main-container {
   height: 100vh;
   width: 100vw;
-  background-color: gray;
+  background-color: #dddcdc;
   display: -ms-grid;
   display: grid;
   place-content: center;
+  padding-top: 3.5rem;
 }
 /*# sourceMappingURL=Compose.module.css.map */

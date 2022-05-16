@@ -19,6 +19,13 @@
 
 .main-navigation__title {
   color: white;
+  margin-right: 1rem;
+}
+
+@media(min-width:868px) {
+  .main-navigation__title {
+    font-size: 2.5rem;
+  }
 }
 
 .main-navigation__title a {
@@ -33,6 +40,11 @@
 .main-navigation__drawer-nav {
   height: 100%;
   color: black;
+}
+.navigation__span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (min-width: 768px) {

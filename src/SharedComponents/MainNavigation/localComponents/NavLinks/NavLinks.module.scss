@@ -1,9 +1,10 @@
 $dark-gray: #292929;
 
 .activeStyle {
-  background: #f8df00;
+  background: #fff;
   border-color: $dark-gray;
   color: $dark-gray;
+  border-radius: 0px;
 }
 
 .nav-links {
@@ -31,7 +32,7 @@ $dark-gray: #292929;
   a:hover,
   a:active,
   a.active {
-    background: #f8df00;
+    background: #fff;
     border-color: $dark-gray;
     color: $dark-gray;
   }
