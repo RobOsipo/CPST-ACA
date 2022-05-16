@@ -20,9 +20,28 @@ $desktop: 1280px;
     @content;
   }
 }
+.openDictionary {
+    position: absolute;
+    left: 25rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    @include tablet {
+        left: 28rem;
+    }
+    @include large {
+        left: 30rem;
+    }
+    @include desktop {
+        left: 35rem;
+    }
+    &:hover {
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+}
 
 .form-container {
-    // height: 50%;
     width: 70vw;
     background-color: rgb(75, 74, 74);
     background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);

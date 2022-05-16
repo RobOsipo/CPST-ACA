@@ -1,17 +1,27 @@
 import React, {useState} from 'react'
 
+import DisplayModal from '../../../../SharedComponents/DisplayModal/DisplayModal'
+import Dictionary from './Components/Dictionary/Dictionary'
 import classes from './ComposeForm.module.scss'
 
 const ComposeForm = () => {
     const [titleInput, setTitleInput] = useState('')
     const [contentInput, setContentInput] = useState('')
+    const [showModal, setShowModal] = useState(false);
+
+    const modalClickOn = () => {
+      setShowModal(true)
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
     }
   
   return (
+      <>
+    <DisplayModal setShowModal={setShowModal} showModal={showModal} component={Dictionary} />
     <div className={classes['form-container']}>
+        <button onClick={modalClickOn} className={classes.openDictionary}>Need help with a word?</button>
         <form className={classes.form}>
         
         <label className={classes.label} htmlFor="title">Title</label>
@@ -23,6 +33,7 @@ const ComposeForm = () => {
         <button className={classes.button} type="submit" onSubmit={(e) => handleSubmit(e)}>Post It!</button>
         </form>
     </div>
+      </>
   )
 }
 
