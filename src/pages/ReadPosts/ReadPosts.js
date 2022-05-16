@@ -44,9 +44,6 @@ const ReadPosts = () => {
         }
     ]
 
-    const mapPosts = () => {
-    
-    }
   return (
       <>
     <MainNavigation />

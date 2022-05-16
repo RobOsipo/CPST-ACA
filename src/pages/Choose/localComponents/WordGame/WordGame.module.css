@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap");
 .body {
-  background: #292929;
-  color: #00b800;
+  background: #fafbfb;
+  color: #0056b8;
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 400;
   height: 100%;
@@ -12,15 +12,21 @@
 }
 
 .button {
-  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-family: "Roboto", sans-serif;
   display: block;
   margin: 0 auto;
   border: none;
-  background: #a80020;
-  background: #00b800;
+  background: #0056b8;
   padding: 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.button:hover {
+  background: transparent;
+  border: solid 2px #0056b8;
+  color: #0056b8;
 }
 
 .button:disabled {
@@ -33,17 +39,17 @@
 }
 
 .textarea {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Roboto", sans-serif;
   border: 3px solid black;
   width: 90%;
   margin: 0 auto;
   outline: none;
   height: 200px;
-  background: #00b800;
+  background: #0056b8;
   padding: 10px;
 }
 
 .textarea:disabled {
-  background-color: #a5a2a2;
+  background-color: #e7e6e6;
 }
 /*# sourceMappingURL=WordGame.module.css.map */

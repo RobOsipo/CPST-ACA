@@ -23,7 +23,6 @@ const DisplayModal = ({setShowModal, showModal, component: Component}) => {
         footer={<button className="modal__btn" onClick={closeMapHandler}>Close</button>}
       >
           <div className="content-container">
-          {/* //todo-- maybe pass a component as a prop to render inside modal so It can truly be reusable  */}
               <Component />
           </div>
       </Modal>

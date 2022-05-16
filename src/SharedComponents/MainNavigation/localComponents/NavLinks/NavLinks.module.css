@@ -5,6 +5,10 @@
   border-radius: 0px;
 }
 
+.nav-link {
+  color: #fff;
+}
+
 .nav-links {
   list-style: none;
   margin: 0;
@@ -65,6 +69,9 @@
 }
 
 @media (min-width: 768px) {
+  .nav-link {
+    color: #fff;
+  }
   .nav-links {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -75,17 +82,15 @@
     margin: 0 0.5rem;
   }
   .nav-links a {
-    color: black;
+    color: #a09f9f;
     text-decoration: none;
   }
   .nav-links button {
     border: 1px solid white;
-    color: white;
     background: transparent;
   }
   .nav-links button:hover,
   .nav-links button:active {
-    background: #f8df00;
     color: #292929;
   }
 }

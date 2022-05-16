@@ -15,8 +15,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(#1d1d1d));
+  background-image: linear-gradient(to right, #434343 0%, #1d1d1d 100%);
   border: solid black 2px;
+  color: #fff;
 }
 
 .post:hover {

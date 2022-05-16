@@ -1,3 +1,5 @@
+
+
 .place-item__modal-content {
     padding: 0;
   }
@@ -16,12 +18,13 @@
   width: 10rem;
   margin: 0 auto;
   border: none;
-  background: rgb(41, 41, 41);
-  color: #00b800;
+  background: transparent;
+  color: #0056b8;
   font-size: 1rem;
+  border: solid 1px #0056b8;
 
 }
 .modal__btn:hover {
-  border: solid 1px #00b800;
+  border: solid 2px #0056b8;
   cursor: pointer;
 }

@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import { Routes, Route, Navigate} from 'react-router-dom'
 
-import MainNavigation from '../SharedComponents/MainNavigation/MainNavigation';
-import DummyPage from '../pages/DummyPage/DummyPage';
+
 import Register from '../pages/Register/Register'
 import Login from '../pages/Login/Login'
 import Choose from '../pages/Choose/Choose'
