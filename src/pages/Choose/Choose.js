@@ -4,6 +4,7 @@ import MainNavigation from '../../SharedComponents/MainNavigation/MainNavigation
 import DisplayModal from '../../SharedComponents/DisplayModal/DisplayModal'
 import WordGame from './Components/WordGame/WordGame'
 
+import cookie from 'cookie'
 import classes from './Choose.module.scss'
 
 const Choose = () => {
@@ -12,6 +13,8 @@ const Choose = () => {
     const modalClickOn = () => {
       setShowModal(true)
     }
+
+   
 
 
   return (

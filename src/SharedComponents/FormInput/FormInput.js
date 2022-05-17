@@ -34,6 +34,8 @@ const FormInput = (props) => {
     formIsValid = true;
   }
 
+
+
   
 
 
@@ -49,38 +51,24 @@ const FormInput = (props) => {
       password: enteredPassword
     }
 
-    console.log('entered values', body)
+    fetch(`http://localhost:5000/auth/${props.postEndPoint}`, { 
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('register or login user data', data)
+        document.cookie = `${props.tokenName}=${data.token || true};max-age=60*10000`
+        return navigate(props.navigateTo, {replace: true})
+    })
+    .catch(err => console.log('.catch block for register user', err))
 
-    // fetch(`http://localhost:4000${props.formEndPoint}`, { 
-    //   method: 'POST',
-    //   body: JSON.stringify(body),
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Accept': 'application/json'
-    //   }
-
-
-    // })
-    // .then(response =>{ 
-    //   console.log(response);
-    //   if(!response.ok){
-    //     throw new Error('In my !response.ok error')
-    //   }
-    //   response.json()
-    // })
-    // .then(data => {
-    //   console.log('data in the same block as my document.cookie', data)
-      
-    //   document.cookie = `loginCookie=true;max-age=60*10000`
-    // })
-    // .catch(err => console.log('In my .catch error', err))
-      
 
     resetPasswordInput();
     resetEmailInput();
-
-    navigate(props.navigateTo)
-   
 
     
   };

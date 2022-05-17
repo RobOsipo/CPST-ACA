@@ -1,31 +1,34 @@
 import React, { useState } from "react";
 import {useNavigate, Navigate} from 'react-router-dom'
 
+import cookie from 'cookie'
 import classes from "./BlogItem.module.scss";
 
 const BlogItem = ({ id, title, content, imageUrl, creator }) => {
   const [expand, setExpand] = useState(false);
   const [deleteMsg, setDeleteMsg] = useState('')
+  const cookies = cookie.parse(document.cookie);
 
     const navigate = useNavigate()
 
   const deleteClickHandler = () => {
 
     fetch(`http://localhost:5000/feed/posts/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        'Authorization': 'Bearer ' + cookies['Token'] 
     })
     .then(response => response.json())
     .then(data => {
         console.log(data)
         setDeleteMsg(data.message)
         return navigate("/read", {replace: true})
-        // return <Navigate to="/read" replace />
+       
         
     })
     .catch(err => console.log('failed to delete', err))
 
-    return navigate("/read", {replace: true})
-    // return <Navigate to="/read" replace />
+    // return navigate("/read", {replace: true})
+    
     
   };
 

@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom'
 
 import DisplayModal from '../../../../SharedComponents/DisplayModal/DisplayModal'
 import Dictionary from './localComponents/Dictionary/Dictionary'
+
+import cookie from 'cookie'
 import classes from './ComposeForm.module.scss'
 
 const ComposeForm = () => {
@@ -27,11 +29,15 @@ const ComposeForm = () => {
             creator: creatorInput
         }
 
+        const cookies = cookie.parse(document.cookie);
+      
+
         fetch('http://localhost:5000/feed/posts', {
           method: 'POST',
           body: JSON.stringify(body),
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json', 
+            'Authorization': 'Bearer ' + cookies['Token'] 
           }
         })
           .then(response => response.json())
