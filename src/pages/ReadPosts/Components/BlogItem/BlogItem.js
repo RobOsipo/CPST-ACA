@@ -2,17 +2,19 @@ import React, { useState } from "react";
 
 import classes from "./BlogItem.module.scss";
 
-const BlogItem = ({ title, content }) => {
+const BlogItem = ({ title, content, imageUrl, createdBy }) => {
   const [expand, setExpand] = useState(false);
 
   const deleteClickHandler = () => {
-    // Fetch req goes here, method DELETE endpoint is title
+    
   };
 
   const displayContent = () => {
     return (
       <div className={classes["content-container"]}>
-        <p>{content}</p>
+      
+        <p className={classes.content}>{content}</p>
+        <img src="" alt={title} />
         <div className={classes["close-and-delete"]}>
           <button
             className={classes.closeButton}

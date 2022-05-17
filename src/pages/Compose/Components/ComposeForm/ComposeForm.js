@@ -7,6 +7,8 @@ import classes from './ComposeForm.module.scss'
 const ComposeForm = () => {
     const [titleInput, setTitleInput] = useState('')
     const [contentInput, setContentInput] = useState('')
+    const [imageInput, setImageInput] = useState('')
+    const [creatorInput, setCreatorInput] = useState('')
     const [showModal, setShowModal] = useState(false);
 
     const modalClickOn = () => {
@@ -26,6 +28,12 @@ const ComposeForm = () => {
         
         <label className={classes.label} htmlFor="title">Title</label>
         <input name="title" id="title" className={classes.input} onChange={(e) => setTitleInput(e.target.value)} />
+
+        <label className={classes.label} htmlFor="title">Image URL</label>
+        <input name="title" id="title" className={classes.input} onChange={(e) => setImageInput(e.target.value)} />
+
+        <label className={classes.label} htmlFor="title">Created By</label>
+        <input name="title" id="title" className={classes.input} onChange={(e) => setCreatorInput(e.target.value)} />
 
         <label className={classes.label} htmlFor="content">Write your Post!</label>
         <textarea rows="20" cols="100" name="content" id="content" className={classes.textarea} onChange={(e) => setContentInput(e.target.value)} />
