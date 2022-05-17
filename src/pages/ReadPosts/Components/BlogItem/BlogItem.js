@@ -1,11 +1,31 @@
 import React, { useState } from "react";
+import {useNavigate, Navigate} from 'react-router-dom'
 
 import classes from "./BlogItem.module.scss";
 
-const BlogItem = ({ title, content, imageUrl, creator }) => {
+const BlogItem = ({ id, title, content, imageUrl, creator }) => {
   const [expand, setExpand] = useState(false);
+  const [deleteMsg, setDeleteMsg] = useState('')
+
+    const navigate = useNavigate()
 
   const deleteClickHandler = () => {
+
+    fetch(`http://localhost:5000/feed/posts/${id}`, {
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        setDeleteMsg(data.message)
+        return navigate("/read", {replace: true})
+        // return <Navigate to="/read" replace />
+        
+    })
+    .catch(err => console.log('failed to delete', err))
+
+    return navigate("/read", {replace: true})
+    // return <Navigate to="/read" replace />
     
   };
 

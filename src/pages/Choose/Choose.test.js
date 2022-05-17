@@ -5,7 +5,7 @@ import Choose from './Choose'
 
 describe('That my main page after login has all the correct links and phrasing', () => {
 
-    // test('Test that the choose page contains a link to the Notes section', () => {
+    // test('Test that the choose page contains a link to compose post', () => {
     
     //   render(<Router><Choose /></Router>);
     
@@ -14,7 +14,7 @@ describe('That my main page after login has all the correct links and phrasing',
     //   expect(element).toBeInTheDocument()
     // });
 
-    // test('Test that the choose page contains a link to the Photos section', () => {
+    // test('Test that the choose page contains a link to the posts', () => {
     
     //     render(<Router><Choose /></Router>);
       
@@ -23,7 +23,7 @@ describe('That my main page after login has all the correct links and phrasing',
     //     expect(element).toBeInTheDocument()
     //   });
 
-    // test('Test that the choose page contains a link to the Mini-games section', () => {
+    // test('Test that the choose page contains a link to the typing game', () => {
     
     //     render(<Router><Choose /></Router>);
       

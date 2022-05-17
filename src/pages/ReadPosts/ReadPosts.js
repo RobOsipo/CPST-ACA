@@ -1,11 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import PostContext from '../../context/post-context'
 
 import BlogItem from './Components/BlogItem/BlogItem'
 import MainNavigation from '../../SharedComponents/MainNavigation/MainNavigation'
 import classes from './ReadPosts.module.scss'
 
 const ReadPosts = () => {
-   const DUMMY = [
+   
+
+    const fetchPostContext = useContext(PostContext)  
+
+    let mapContext = fetchPostContext.posts || [
         {
             "_id": "628045dcb6343aa13b43d3bd",
             "title": "test",
@@ -58,14 +63,18 @@ const ReadPosts = () => {
         }
     ]
 
+    const data = mapContext.map((post) => {
+        return <BlogItem key={post._id} id={post._id} imageUrl={post.imageUrl} creator={post.creator.name} title={post.title} content={post.content} />
+    })
+
+
+
   return (
       <>
     <MainNavigation />
     <div className={classes['main-container']}>
         <ul className={classes.list}>
-            {DUMMY.map((post) => {
-                return <BlogItem key={post._id} imageUrl={post.imageUrl} creator={post.creator.name} title={post.title} content={post.content} />
-            })}
+            {data}
         </ul>
     </div>
 
