@@ -46,9 +46,11 @@ $desktop: 1280px;
 .form-container {
     width: 70vw;
     margin-top: 1rem;
-    // background-color: rgb(75, 74, 74);
     background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
     animation: drop-in 1000ms;
 }
 
@@ -66,12 +68,6 @@ $desktop: 1280px;
   }
 
 
-
-.form {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-}
 
 .input {
     width: 50%;
