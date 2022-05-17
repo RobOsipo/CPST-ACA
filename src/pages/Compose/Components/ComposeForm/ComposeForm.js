@@ -37,7 +37,7 @@ const ComposeForm = () => {
           body: JSON.stringify(body),
           headers: {
             'Content-Type': 'application/json', 
-            'Authorization': 'Bearer ' + cookies['Token'] 
+            Authorization: `Bearer ${cookies['Token']}`
           }
         })
           .then(response => response.json())
@@ -53,7 +53,7 @@ const ComposeForm = () => {
     <DisplayModal setShowModal={setShowModal} showModal={showModal} component={Dictionary} />
     <div className={classes['form-container']}>
         <button onClick={modalClickOn} className={classes.openDictionary}>Need help with a word? Click Me!</button>
-        {/* <form className={classes.form}> */}
+       
         
         <label className={classes.label} htmlFor="title">Title</label>
         <input name="title" id="title" className={classes.input} onChange={(e) => setTitleInput(e.target.value)} />
@@ -68,7 +68,7 @@ const ComposeForm = () => {
         <textarea rows="20" cols="100" name="content" id="content" className={classes.textarea} onChange={(e) => setContentInput(e.target.value)} />
 
         <button className={classes.button} onClick={() => handleClick()}>Post It!</button>
-        {/* </form> */}
+        
     </div>
       </>
   )

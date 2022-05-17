@@ -18,7 +18,7 @@ describe('That my main page after login has all the correct links and phrasing',
     
     //     render(<Router><Choose /></Router>);
       
-    //     const element = screen.getByText(/See my Blogs/i)
+    //     const element = screen.getByText(/See my Posts/i)
       
     //     expect(element).toBeInTheDocument()
     //   });
