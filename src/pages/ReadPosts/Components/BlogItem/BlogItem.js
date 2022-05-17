@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import classes from "./BlogItem.module.scss";
 
-const BlogItem = ({ title, content, imageUrl, createdBy }) => {
+const BlogItem = ({ title, content, imageUrl, creator }) => {
   const [expand, setExpand] = useState(false);
 
   const deleteClickHandler = () => {
@@ -14,7 +14,8 @@ const BlogItem = ({ title, content, imageUrl, createdBy }) => {
       <div className={classes["content-container"]}>
       
         <p className={classes.content}>{content}</p>
-        <img src="" alt={title} />
+        <img className={classes.image} src={imageUrl} alt={title} />
+        <p className={classes.creator}>Created By: {creator}</p>
         <div className={classes["close-and-delete"]}>
           <button
             className={classes.closeButton}

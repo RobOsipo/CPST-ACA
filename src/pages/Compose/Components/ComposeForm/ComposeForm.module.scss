@@ -22,23 +22,24 @@ $desktop: 1280px;
 }
 .openDictionary {
     position: absolute;
-    left: 25rem;
+    left: 14rem;
     color: #fff;
     background: transparent;
     border: none;
-    margin-top: 2.5px;
+    margin-top: 1rem;
+    font-size: 1.1rem;
     @include tablet {
-        left: 28rem;
+        left: 17rem;
     }
     @include large {
-        left: 45rem;
+        left: 22rem;
     }
     @include desktop {
-        left: 57rem;
+        left: 35rem;
     }
     &:hover {
         cursor: pointer;
-        font-size: 1.2rem;
+        font-size: 1.35rem;
     }
 }
 

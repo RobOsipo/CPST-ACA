@@ -2,7 +2,7 @@
 
 .post {
     min-height: 7rem;
-    max-height: 20rem;
+    max-height: 40rem;
     border-radius: 10px;
     width: 30rem;
     margin: 1rem;
@@ -24,6 +24,13 @@
     text-align: center;
     color: white;
 }
+
+.image {
+ width: 25rem;
+ height: 300px;
+ margin: 0 auto;
+}
+
 .close-and-delete {
     width: 18rem;
     height: 2rem;

@@ -23,7 +23,7 @@ const ComposeForm = () => {
       <>
     <DisplayModal setShowModal={setShowModal} showModal={showModal} component={Dictionary} />
     <div className={classes['form-container']}>
-        <button onClick={modalClickOn} className={classes.openDictionary}>Need help with a word?</button>
+        <button onClick={modalClickOn} className={classes.openDictionary}>Need help with a word? Click Me!</button>
         <form className={classes.form}>
         
         <label className={classes.label} htmlFor="title">Title</label>

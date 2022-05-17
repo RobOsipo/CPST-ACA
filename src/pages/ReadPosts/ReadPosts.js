@@ -11,7 +11,7 @@ const ReadPosts = () => {
             "title": "test",
             "content": "Heres some more content brahhh",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Ff%2Fe%2F519365-large-japanese-scenery-wallpaper-2048x1401.jpg&f=1&nofb=1",
-            "createdBy": "Rob",
+            "creator": {name: "rob"},
             "__v": 0
         },
         {
@@ -19,7 +19,7 @@ const ReadPosts = () => {
             "title": "test2",
             "content": "Heres some more content brahhh",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Ff%2Fe%2F519365-large-japanese-scenery-wallpaper-2048x1401.jpg&f=1&nofb=1",
-            "createdBy": "Rob",
+             "creator": {name: "rob"},
             "__v": 0
         },
         {
@@ -27,7 +27,7 @@ const ReadPosts = () => {
             "title": "test3",
             "content": "Heres some more content brahhhhh",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Ff%2Fe%2F519365-large-japanese-scenery-wallpaper-2048x1401.jpg&f=1&nofb=1",
-            "createdBy": "Rob",
+             "creator": {name: "rob"},
             "__v": 0
         }, 
         {
@@ -35,7 +35,7 @@ const ReadPosts = () => {
             "title": "test",
             "content": "Heres some more content brahhh",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Ff%2Fe%2F519365-large-japanese-scenery-wallpaper-2048x1401.jpg&f=1&nofb=1",
-            "createdBy": "Rob",
+             "creator": {name: "rob"},
             "__v": 0
         },
         {
@@ -43,7 +43,7 @@ const ReadPosts = () => {
             "title": "test2",
             "content": "Heres some more content brahhh",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Ff%2Fe%2F519365-large-japanese-scenery-wallpaper-2048x1401.jpg&f=1&nofb=1",
-            "createdBy": "Rob",
+             "creator": {name: "rob"},
             "__v": 0
         },
         {
@@ -51,7 +51,9 @@ const ReadPosts = () => {
             "title": "test3",
             "content": "Heres some more content brahhhhh",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Ff%2Fe%2F519365-large-japanese-scenery-wallpaper-2048x1401.jpg&f=1&nofb=1",
-            "createdBy": "Rob",
+             "creator": {
+                 "name": "rob"
+                },
             "__v": 0
         }
     ]
@@ -62,7 +64,7 @@ const ReadPosts = () => {
     <div className={classes['main-container']}>
         <ul className={classes.list}>
             {DUMMY.map((post) => {
-                return <BlogItem key={post._id} imageUrl={post.imageUrl} createdBy={post.createdBy} title={post.title} content={post.content} />
+                return <BlogItem key={post._id} imageUrl={post.imageUrl} creator={post.creator.name} title={post.title} content={post.content} />
             })}
         </ul>
     </div>
