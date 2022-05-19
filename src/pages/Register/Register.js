@@ -2,7 +2,7 @@ import React from "react";
 import FormInput from "../../SharedComponents/FormInput/FormInput";
 import LogoDrop from "./Components/LogoDrop/LogoDrop";
 
-import classes from "./Register.module.css";
+import classes from "./Register.module.scss";
 
 const Register = () => {
 

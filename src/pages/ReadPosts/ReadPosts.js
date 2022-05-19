@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import PostContext from '../../context/post-context'
 
 import BlogItem from './Components/BlogItem/BlogItem'
@@ -6,6 +6,7 @@ import MainNavigation from '../../SharedComponents/MainNavigation/MainNavigation
 import classes from './ReadPosts.module.scss'
 
 const ReadPosts = () => {
+  
    
 
     const fetchPostContext = useContext(PostContext)  
@@ -63,10 +64,12 @@ const ReadPosts = () => {
         }
     ]
 
+
+   
+    
     const data = mapContext.map((post) => {
         return <BlogItem key={post._id} id={post._id} imageUrl={post.imageUrl} creator={post.creator.name} title={post.title} content={post.content} />
     })
-
 
 
   return (

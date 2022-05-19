@@ -13,6 +13,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator }) => {
 
   const deleteClickHandler = () => {
 
+    //! REST implementation
     fetch(`http://localhost:5000/feed/posts/${id}`, {
         method: 'DELETE',
         headers: {
@@ -26,13 +27,39 @@ const BlogItem = ({ id, title, content, imageUrl, creator }) => {
         console.log(data)
         setDeleteMsg(data.message)
         return <Navigate to={"/read"} replace />
-        // return navigate("/read", {replace: true})
        
         
     })
     .catch(err => console.log('failed to delete', err))
 
     return <Navigate to={"/read"} replace />
+
+    // ! GraphQL implementation
+    // const graphqlDeleteQuery = {
+    //     query: `
+    //         mutation {
+    //             deletePost(id: "${id}")
+    //         }
+    //     `
+    // }
+
+    // fetch(`http://localhost:5000/graphql`, {
+    //     method: 'DELETE',
+    //     body: JSON.stringify(graphqlDeleteQuery),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+            
+    //     }
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     console.log(data)
+    //     setDeleteMsg(data.message)
+    //     return <Navigate to={"/read"} replace />
+       
+        
+    // })
+    // .catch(err => console.log('failed to delete', err))
     
     
   };
