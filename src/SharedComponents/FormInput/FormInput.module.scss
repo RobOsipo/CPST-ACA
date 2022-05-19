@@ -1,28 +1,25 @@
-
-
 .title {
-    // -webkit-text-stroke: 0.3px black; 
-    color: white;
-    font-size: 2rem;
+  // -webkit-text-stroke: 0.3px black;
+  color: white;
+  font-size: 2rem;
 }
 
 .link {
-    text-decoration: none;
-    color: white;
-    &:hover {
-      color: rgb(214, 212, 212);
-      opacity: 0.5;
-    }
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: rgb(214, 212, 212);
+    opacity: 0.5;
+  }
 }
 
-
 .form {
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 30rem;
-    color: var(--font-color-reg);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+  color: var(--font-color-reg);
 }
 
 .form-control {
@@ -58,8 +55,6 @@
   }
 }
 
-
-
 .button {
   font: inherit;
   background-color: #443170;
@@ -84,9 +79,7 @@
   }
 }
 
-
-
-.invalid  {
+.invalid {
   input {
     border: 1px solid #b40e0e;
     background-color: #fddddd;
@@ -96,7 +89,6 @@
     background-color: #fbe8d2;
   }
 }
-
 
 .error-text {
   color: #b44141;

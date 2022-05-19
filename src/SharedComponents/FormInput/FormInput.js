@@ -72,11 +72,12 @@ const FormInput = (props) => {
     // })
     // .then(response => response.json())
     // .then(data => {
-        // console.log(data.data.login.token)
+    // console.log(data.data.login.token)
     //     document.cookie = `${props.tokenName}=${data.data.login.token || true};max-age=60*10000`
     //     return navigate(props.navigateTo, {replace: true})
     // })
 
+    //! REST API implementation
     fetch(`http://localhost:5000/auth/${props.postEndPoint}`, {
       method: "POST",
       body: JSON.stringify(body),

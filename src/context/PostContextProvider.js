@@ -1,52 +1,44 @@
-import React, {useEffect, useState} from 'react'
-import PostContext from './post-context'
+import React, { useEffect, useState } from "react";
+import PostContext from "./post-context";
 
 const PostContextProvider = ({ children }) => {
-const [posts, setPosts] = useState([])
-const [postsLength, setPostsLength] = useState(0)
+  const [posts, setPosts] = useState([]);
 
-    // ! REST implementation
-    useEffect(() => {
-        fetch('http://localhost:5000/feed/posts')
-            .then(response => response.json())
-            .then(data => {
-                setPosts(data)
-            })
-            .then(err => console.log('errors fetching post', err))
-    }, [posts])
+  // ! REST implementation
+  useEffect(() => {
+    fetch("http://localhost:5000/feed/posts")
+      .then((response) => response.json())
+      .then((data) => {
+        setPosts(data);
+      })
+      .catch((err) => console.log("errors fetching post", err));
+  }, [posts]);
 
-    // ! GraphQL implementation
-    // const graphqlQueryFetchPosts = {
-    //     query: `query {
-    //         posts {
-    //           posts {
-    //             _id,
-    //             title,
-    //             content,
-    //             imageUrl,
-    //           }
-    //         }
-    //       }`
-    // }
+  // ! GraphQL implementation
+  //     const graphqlQueryFetchPosts = {
+  //         query: `{
+  //             posts {
+  //               posts {
+  //                 _id,
+  //                 title,
+  //                 content,
+  //                 imageUrl,
+  //                 createdAt
+  //               }
+  //             }
+  //           }`
+  //     }
+  // console.log(posts)
+  //     useEffect(() => {
+  //         fetch('http://localhost/5000/graphql')
+  //         .then(response => response.json())
+  //         .then(data => {
+  //                 setPosts(data.posts)
+  //         })
+  //         .catch(err => console.log(err))
+  //     }, [posts])
 
-    // useEffect(() => {
-    //     fetch('http://localhost/5000/graphql', {
-    //         body: JSON.stringify(graphqlQueryFetchPosts), 
-    //     headers: {                                    
-    //         'Content-Type': 'application/json'
-    //       }
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-                // setPosts(data.posts)
-    //     })
-    // }, [posts])
+  return <PostContext.Provider value={posts}>{children}</PostContext.Provider>;
+};
 
-  return (
-    <PostContext.Provider value={posts}>
-        {children}
-    </PostContext.Provider>
-  )
-}
-
-export default PostContextProvider
+export default PostContextProvider;
