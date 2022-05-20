@@ -6,12 +6,7 @@ import classes from "./Register.module.scss";
 
 const Register = () => {
 
-
-  
-
-
-
-
+    
 
 
   return (
@@ -39,6 +34,7 @@ const Register = () => {
           buttonText="Register"
           linkText="I Am Already Registered!"
           linkTo="/login"
+          graphql="register"
         />
       </main>
     </div>

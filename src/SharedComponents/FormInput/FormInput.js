@@ -43,6 +43,7 @@ const FormInput = (props) => {
     };
 
     //! GraphQL implementation
+
     // const graphqlQueryCreateUser = {
     //     query: `
     //     mutation {
@@ -54,19 +55,45 @@ const FormInput = (props) => {
     //     `
     // }
 
-    // const graphqlQueryLoginUser = {
+    //   const graphqlQueryLoginUser = {
     //     query: `{
-    //         login(email: "${enteredEmail}", password: "${enteredPassword}") {
-    //             token
-    //             userId
-    //         }
-    //     }`
+    //             login(email: "${enteredEmail}", password: "${enteredPassword}") {
+    //                 token
+    //                 userId
+    //             }
+    //         }`,
+    //   };
+
+    // const graphqlConditional = () => {
+    //     if (props.graphql === 'register') {
+    //         return {
+    //                 query: `
+    //                 mutation {
+    //                     createUser(userInput: {email: "${enteredEmail}", password: "${enteredPassword}"}) {
+    //                       _id
+    //                       email
+    //                     }
+    //                   }
+    //                 `
+    //             }
+    //     } else if (props.graphql === 'login') {
+    //             return {
+    //                 query: `{
+    //                         login(email: "${enteredEmail}", password: "${enteredPassword}") {
+    //                             token
+    //                             userId
+    //                         }
+    //                     }`
+    //               };
+    //     } else {
+    //         console.log('wrong graphql props passed to FormInput')
+    //     }
     // }
 
     // fetch('http://localhost/5000/graphql', {
     //     method: 'POST',
-    //     body: JSON.stringify(graphqlQueryCreateUser), // todo: pass either CreateUser or LoginUser down to component as props
-    //     headers: {                                    // todo: depending on what query I need
+    //     body: JSON.stringify(graphqlConditional),
+    //     headers: {
     //         'Content-Type': 'application/json'
     //       }
     // })

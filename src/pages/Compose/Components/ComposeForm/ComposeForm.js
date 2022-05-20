@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import DisplayModal from "../../../../SharedComponents/DisplayModal/DisplayModal";
 import Dictionary from "./localComponents/Dictionary/Dictionary";
@@ -14,13 +15,15 @@ const ComposeForm = () => {
   const [creatorInput, setCreatorInput] = useState("");
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch()
   const modalClickOn = () => {
     setShowModal(true);
   };
 
   const handleClick = () => {
     // ! REST API implementation
+
+
     const body = {
       title: titleInput,
       content: contentInput,
@@ -41,6 +44,7 @@ const ComposeForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("data from post--", data);
+        dispatch({ type: 'FLIPFLAG'})
         return navigate("/read", { replace: true });
       })
       .catch((err) => console.log(".catch block of Create Post", err));

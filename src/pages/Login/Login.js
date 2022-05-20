@@ -4,6 +4,8 @@ import FormInput from "../../SharedComponents/FormInput/FormInput";
 
 import classes from "./Login.module.scss";
 const Login = () => {
+
+
   return (
     <div className={classes.area}>
       <ul className={classes.circles}>
@@ -29,6 +31,7 @@ const Login = () => {
             navigateTo="/choose"
             linkTo="/"
             linkText=" I Still Need To Register!"
+            graphql="login"
           />{" "}
         </div>
       </main>

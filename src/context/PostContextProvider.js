@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import {useSelector} from 'react-redux'
 import PostContext from "./post-context";
 
 const PostContextProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
+  const loginFlag = useSelector(state => state.flag)
+ 
 
   // ! REST implementation
   useEffect(() => {
@@ -12,7 +15,7 @@ const PostContextProvider = ({ children }) => {
         setPosts(data);
       })
       .catch((err) => console.log("errors fetching post", err));
-  }, [posts]);
+  }, [loginFlag]);
 
   // ! GraphQL implementation
   //     const graphqlQueryFetchPosts = {
