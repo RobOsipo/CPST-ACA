@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate, Navigate } from "react-router-dom";
+import {useDispatch} from 'react-redux'
 
 import cookie from "cookie";
 import classes from "./BlogItem.module.scss";
 
 const BlogItem = ({ id, title, content, imageUrl, creator }) => {
   const [expand, setExpand] = useState(false);
-  const [deleteMsg, setDeleteMsg] = useState("");
   const cookies = cookie.parse(document.cookie);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const deleteClickHandler = () => {
     //! REST implementation
@@ -23,7 +24,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator }) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setDeleteMsg(data.message);
+            dispatch({ type: 'FLIPFLAG' })
         return <Navigate to={"/read"} replace />;
       })
       .catch((err) => console.log("failed to delete", err));
