@@ -41,8 +41,6 @@ function App() {
             </ProtectedAuthRoute>
           }
         />
-
-        {/* <Navigate to="/" /> */}
       </Routes>
     </>
   );

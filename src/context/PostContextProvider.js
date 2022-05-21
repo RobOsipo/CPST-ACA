@@ -18,28 +18,28 @@ const PostContextProvider = ({ children }) => {
   }, [loginFlag]);
 
   // ! GraphQL implementation
-  //     const graphqlQueryFetchPosts = {
-  //         query: `{
-  //             posts {
-  //               posts {
-  //                 _id,
-  //                 title,
-  //                 content,
-  //                 imageUrl,
-  //                 createdAt
-  //               }
-  //             }
-  //           }`
-  //     }
-  // console.log(posts)
-  //     useEffect(() => {
-  //         fetch('http://localhost/5000/graphql')
-  //         .then(response => response.json())
-  //         .then(data => {
-  //                 setPosts(data.posts)
-  //         })
-  //         .catch(err => console.log(err))
-  //     }, [posts])
+//       const graphqlQueryFetchPosts = {
+//           query: `{
+//               posts {
+//                 posts {
+//                   _id,
+//                   title,
+//                   content,
+//                   imageUrl,
+//                   createdAt
+//                 }
+//               }
+//             }`
+//       }
+//   console.log(posts)
+//       useEffect(() => {
+//           fetch('http://localhost/5000/graphql')
+//           .then(response => response.json())
+//           .then(data => {
+//                   setPosts(data.posts)
+//           })
+//           .catch(err => console.log(err))
+//       }, [loginFlag])
 
   return <PostContext.Provider value={posts}>{children}</PostContext.Provider>;
 };
