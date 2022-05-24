@@ -5,7 +5,7 @@ import {useDispatch} from 'react-redux'
 import cookie from "cookie";
 import classes from "./BlogItem.module.scss";
 
-const BlogItem = ({ id, title, content, imageUrl, creator }) => {
+const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
   const [expand, setExpand] = useState(false);
   const cookies = cookie.parse(document.cookie);
 
@@ -64,6 +64,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator }) => {
         <p className={classes.content}>{content}</p>
         <img className={classes.image} src={imageUrl} alt={title} />
         <p className={classes.creator}>Created By: {creator}</p>
+        <p className={classes.creator}>Created At: {createdAt}</p>
         <div className={classes["close-and-delete"]}>
           <button
             className={classes.closeButton}
@@ -81,6 +82,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator }) => {
 
   return (
     <li className={classes.post}>
+    {!expand && <p className={classes['fixed-creator']}>Creator: {creator}</p>}
       <h3 className={classes.title}>{title}</h3>
       {!expand && (
         <button className={classes.openButton} onClick={() => setExpand(true)}>

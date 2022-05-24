@@ -7,6 +7,7 @@ import classes from "./ReadPosts.module.scss";
 
 const ReadPosts = () => {
   const fetchPostContext = useContext(PostContext);
+  console.log('fpc', fetchPostContext)
 
   let mapContext = fetchPostContext.posts || [
     {
@@ -73,6 +74,7 @@ const ReadPosts = () => {
         key={post._id}
         id={post._id}
         imageUrl={post.imageUrl}
+        createdAt={post.createdAt}
         creator={post.creator.name}
         title={post.title}
         content={post.content}

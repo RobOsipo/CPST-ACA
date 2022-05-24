@@ -12,7 +12,7 @@ const ComposeForm = () => {
   const [titleInput, setTitleInput] = useState("");
   const [contentInput, setContentInput] = useState("");
   const [imageInput, setImageInput] = useState("");
-  const [creatorInput, setCreatorInput] = useState("");
+  const [creatorInput, setCreatorInput] = useState({name: ""});
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -115,7 +115,7 @@ const ComposeForm = () => {
           name="title"
           id="title"
           className={classes.input}
-          onChange={(e) => setCreatorInput(e.target.value)}
+          onChange={(e) => setCreatorInput({name: e.target.value})}
         />
 
         <label className={classes.label} htmlFor="content">
