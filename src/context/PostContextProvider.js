@@ -13,7 +13,6 @@ const PostContextProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
-        console.log(data)
       })
       .catch((err) => console.log("errors fetching post", err));
   }, [loginFlag]);

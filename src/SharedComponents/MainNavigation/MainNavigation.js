@@ -7,7 +7,7 @@ import SideDrawerNavLinks from "./localComponents/SideDrawerNavLinks/SideDrawerN
 import SideDrawer from "./localComponents/SideDrawer/SideDrawer";
 import Backdrop from "./localComponents/Backdrop/Backdrop";
 import Logostache from "../../icons/LogoStache/LogoStache";
-import "./MainNavigation.css";
+import "./MainNavigation.scss";
 
 const MainNavigation = (props) => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);

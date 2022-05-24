@@ -1,0 +1,29 @@
+$blue: #0056b8;
+.place-item__modal-content {
+  padding: 0;
+}
+
+.place-item__modal-actions {
+  text-align: right;
+}
+
+.content-container {
+  height: 25rem;
+  width: 100%;
+  background: rgb(41, 41, 41);
+}
+
+.modal__btn {
+  width: 10rem;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+  color: $blue;
+  font-size: 1rem;
+  border: solid 1px $blue;
+  &:hover {
+    border: solid 2px $blue;
+    cursor: pointer;
+  }
+}
+

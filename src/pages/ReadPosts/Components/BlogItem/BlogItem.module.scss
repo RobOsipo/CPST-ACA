@@ -1,100 +1,201 @@
+$tablet: 768px;
+$large: 1024px;
+$desktop: 1280px;
 
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
 
 .post {
-    min-height: 7rem;
-    max-height: 40rem;
-    border-radius: 10px;
-    width: 30rem;
-    margin: 1rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);
-    border: solid black 2px;
-    color: #fff;
+  min-height: 7rem;
+  max-height: 60rem;
+  border-radius: 10px;
+  width: 30rem;
+  margin: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);
+  border: solid black 2px;
+  color: #fff;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
 
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        cursor: pointer
-    }
+  @include tablet {
+    width: 35rem;
+  }
+  @include large {
+    width: 45rem;
+  }
+  @include desktop {
+    width: 55rem;
+  }
 }
 
 .fixed-creator {
-    position: absolute; 
-    left: 80px;
-    color: black;
+  font-size: 1rem;
+  @include tablet {
+    font-size: 1.1rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+  }
+  @include desktop {
+    font-size: 1.3rem;
+  }
 }
 
 .title {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  @include tablet {
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+  }
+  @include large {
+    font-size: 1.65rem;
+    letter-spacing: 1.4px;
+  }
+  @include desktop {
+    font-size: 1.8rem;
+    letter-spacing: 1.4px;
+  }
+}
+
+.content {
+  font-size: 1rem;
+  max-width: 25rem;
+  @include tablet {
+    font-size: 1.1rem;
+    max-width: 30rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+    max-width: 35rem;
+  }
+  @include desktop {
+    font-size: 1.3rem;
+    max-width: 40rem;
+  }
 }
 
 .image {
- width: 25rem;
- height: 300px;
- margin: 0 auto;
+  width: 25rem;
+  height: 300px;
+  margin: 0 auto;
+  @include tablet {
+    width: 30rem;
+    height: 400px;
+  }
+  @include large {
+    width: 40rem;
+    height: 460px;
+  }
+  @include desktop {
+    width: 45rem;
+    height: 500px;
+  }
+}
+
+.creator {
+  font-size: 1rem;
+  @include tablet {
+    font-size: 1.1rem;
+  }
+  @include large {
+    font-size: 1.2rem;
+  }
+  @include desktop {
+    font-size: 1.3rem;
+  }
 }
 
 .close-and-delete {
-    width: 18rem;
-    height: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 25rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include tablet {
+    width: 30rem;
+  }
+  @include large {
+    width: 40rem;
+  }
+  @include desktop {
+    width: 45rem;
+  }
 }
 
 .openButton {
-    background-color: rgb(0, 0, 0);
-    border: solid #fff 2px;
-    background: transparent;
-    color: white;
-    width: 10rem;
-    margin: 0 auto;
-    height: 2.5rem;
-    border-radius: 10px;
-    transition: 0.70s;
-    -webkit-transition: 0.70s;
-    -moz-transition: 0.70s;
-    -ms-transition: 0.70s;
-    -o-transition: 0.70s;
-    &:hover {
-        background-color: #fff;
-        color:rgb(100, 100, 100);
-        cursor: pointer;
-        transition: 0.70s;
-      -webkit-transition: 0.70s;
-      -moz-transition: 0.70s;
-      -ms-transition: 0.70s;
-      -o-transition: 0.70s;
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
+  background-color: rgb(0, 0, 0);
+  border: solid #fff 2px;
+  background: transparent;
+  color: white;
+  width: 10rem;
+  margin: 0 auto;
+  height: 2.5rem;
+  border-radius: 10px;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  &:hover {
+    background-color: #fff;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .closeButton {
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 3px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .deleteButton {
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 3px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
-

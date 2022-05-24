@@ -5,10 +5,6 @@ import LogoDrop from "./Components/LogoDrop/LogoDrop";
 import classes from "./Register.module.scss";
 
 const Register = () => {
-
-    
-
-
   return (
     <div className={classes.area}>
       <ul className={classes.circles}>

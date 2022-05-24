@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./localComponents/Modal/Modal";
-import "./DisplayModal.css";
+import "./DisplayModal.scss";
 
 const DisplayModal = ({ setShowModal, showModal, component: Component }) => {
   const closeMapHandler = () => {

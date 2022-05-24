@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Navigate } from "react-router-dom";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 
 import cookie from "cookie";
 import classes from "./BlogItem.module.scss";
@@ -10,7 +10,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
   const cookies = cookie.parse(document.cookie);
 
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const deleteClickHandler = () => {
     //! REST implementation
@@ -24,7 +24,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-            dispatch({ type: 'FLIPFLAG' })
+        dispatch({ type: "FLIPFLAG" });
         return <Navigate to={"/read"} replace />;
       })
       .catch((err) => console.log("failed to delete", err));
@@ -62,7 +62,9 @@ const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
     return (
       <div className={classes["content-container"]}>
         <p className={classes.content}>{content}</p>
-        <img className={classes.image} src={imageUrl} alt={title} />
+        {imageUrl ? (
+          <img className={classes.image} src={imageUrl} alt={title} />
+        ) : null}
         <p className={classes.creator}>Created By: {creator}</p>
         <p className={classes.creator}>Created At: {createdAt}</p>
         <div className={classes["close-and-delete"]}>
@@ -82,8 +84,10 @@ const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
 
   return (
     <li className={classes.post}>
-    {!expand && <p className={classes['fixed-creator']}>Creator: {creator}</p>}
       <h3 className={classes.title}>{title}</h3>
+      {!expand && (
+        <p className={classes["fixed-creator"]}>Creator: {creator}</p>
+      )}
       {!expand && (
         <button className={classes.openButton} onClick={() => setExpand(true)}>
           Read more here!

@@ -7,7 +7,6 @@ import classes from "./ReadPosts.module.scss";
 
 const ReadPosts = () => {
   const fetchPostContext = useContext(PostContext);
-  console.log('fpc', fetchPostContext)
 
   let mapContext = fetchPostContext.posts || [
     {
