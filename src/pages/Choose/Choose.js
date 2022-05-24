@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import MainNavigation from "../../SharedComponents/MainNavigation/MainNavigation";
 import DisplayModal from "../../SharedComponents/DisplayModal/DisplayModal";
 import WordGame from "./Components/WordGame/WordGame";
@@ -8,11 +9,16 @@ import cookie from "cookie";
 import classes from "./Choose.module.scss";
 
 const Choose = () => {
+  const reRenderFlag = useSelector((state) => state.flag);
   const [showModal, setShowModal] = useState(false);
 
   const modalClickOn = () => {
     setShowModal(true);
   };
+
+  useEffect(() => {
+    return console.log("Choose page rerender");
+  }, [reRenderFlag]);
 
   return (
     <section className={classes["main-container"]}>

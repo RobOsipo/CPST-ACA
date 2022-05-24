@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
@@ -11,6 +12,12 @@ import ProtectedAuthRoute from "./ProtectedAuthRoute/ProtectedAuthRoute";
 import classes from "./App.module.scss";
 
 function App() {
+  const reRenderFlag = useSelector((state) => state.flag);
+
+  useEffect(() => {
+    return console.log("Whole App rerender");
+  }, [reRenderFlag]);
+
   return (
     <>
       <Routes>

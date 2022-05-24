@@ -7,11 +7,6 @@ $dark-gray: #292929;
   border-radius: 0px;
 }
 
-.nav-link {
-  color: #fff;
-}
-
-
 .nav-links {
   list-style: none;
   margin: 0;
@@ -32,42 +27,21 @@ $dark-gray: #292929;
     color: $dark-gray;
     text-decoration: none;
     padding: 0.5rem;
+    &:hover,
+    &:active {
+      background: #fff;
+      border-color: $dark-gray;
+      color: $dark-gray;
+    }
+
+    .active {
+      background: #fff;
+      border-color: $dark-gray;
+      color: $dark-gray;
+    }
   }
 
-  a:hover,
-  a:active,
-  a.active {
-    background: #fff;
-    border-color: $dark-gray;
-    color: $dark-gray;
-  }
-
-  button {
-    cursor: pointer;
-    border: 1px solid $dark-gray;
-    color: $dark-gray;
-    background: transparent;
-    padding: 0.5rem;
-    font: inherit;
-  }
-
-  button:focus {
-    outline: none;
-  }
-
-  button:hover,
-  button:active {
-  background: $dark-gray;
-  color: white;
-  }
-}
-
-
-@media (min-width: 768px) {
-  .nav-link {
-    color: #fff;
-  }
-  .nav-links {
+  @media (min-width: 768px) {
     flex-direction: row;
 
     li {
@@ -75,19 +49,22 @@ $dark-gray: #292929;
     }
 
     a {
-      color: rgb(160, 159, 159);
+      color: #fff;
       text-decoration: none;
     }
-
-    button {
-      border: 1px solid white;
-      background: transparent;
-    }
-
-    button:hover,
-    button:active {
-    color: $dark-gray;
-    }
   }
+}
 
+.button {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  font: inherit;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logout {
+  color: #fff;
 }
