@@ -1,12 +1,11 @@
 .title {
   // -webkit-text-stroke: 0.3px black;
-  color: white;
   font-size: 2rem;
 }
 
 .link {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   &:hover {
     color: rgb(214, 212, 212);
     opacity: 0.5;
@@ -19,7 +18,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 30rem;
-  color: var(--font-color-reg);
+  color: var(--white);
 }
 
 .form-control {
@@ -35,7 +34,7 @@
   label {
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: var(--white);
   }
 
   input,

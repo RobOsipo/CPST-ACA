@@ -19,6 +19,24 @@ $desktop: 1280px;
     @content;
   }
 }
+
+// @mixin tablet {
+//   @media (min-width: var(--tablet)) {
+//     @content;
+//   }
+// }
+
+// @mixin large {
+//   @media (min-width: var(--large)) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media (min-width: var(--desktop)) {
+//     @content;
+//   }
+// }
 $bg-white: rgba(235, 234, 234, 1);
 $bg-gradient: linear-gradient(
   40deg,

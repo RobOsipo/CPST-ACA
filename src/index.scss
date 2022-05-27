@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
@@ -11,3 +11,13 @@ body {
   background-color: #3f3f3f;
 }
 
+:root {
+  // colors
+  --white: #fff;
+  --off-white: #ccc;
+
+  // media queries
+  --tablet: 768px;
+  --large: 1024px;
+  --desktop: 1280px;
+}
