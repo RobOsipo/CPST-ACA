@@ -9,7 +9,6 @@ const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
   const [expand, setExpand] = useState(false);
   const cookies = cookie.parse(document.cookie);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const deleteClickHandler = () => {
