@@ -14,7 +14,7 @@ const BlogItem = ({ id, title, content, imageUrl, creator, createdAt }) => {
 
   const deleteClickHandler = () => {
     //! REST implementation
-    fetch(`http://localhost:5000/feed/posts/${id}`, {
+    fetch(`https://social-media-rest.vercel.app/feed/posts/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

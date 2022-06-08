@@ -1,5 +1,6 @@
 ## A Full-Stack Application built with React/SCSS, Node/Express, and MongoDB
 
+
 * This app... 
 * Allows users to login and create new posts, main site can not be accessed until registered and logged in
 * Incorporates a third party dictionary API

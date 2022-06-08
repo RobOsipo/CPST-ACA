@@ -33,7 +33,7 @@ const ComposeForm = () => {
 
     const cookies = cookie.parse(document.cookie);
 
-    fetch("http://localhost:5000/feed/posts", {
+    fetch("https://social-media-rest.vercel.app/feed/posts", {
       method: "POST",
       body: JSON.stringify(body),
       headers: {

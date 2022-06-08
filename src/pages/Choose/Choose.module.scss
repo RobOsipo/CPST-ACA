@@ -38,23 +38,10 @@ $desktop: 1280px;
 //   }
 // }
 $bg-white: rgba(235, 234, 234, 1);
-$bg-gradient: linear-gradient(
-  40deg,
-  hsl(240deg 100% 20%) 0%,
-  hsl(230deg 57% 33%) 10%,
-  hsl(214deg 52% 42%) 20%,
-  hsl(199deg 54% 49%) 29%,
-  hsl(188deg 73% 54%) 39%,
-  hsl(180deg 100% 50%) 49%,
-  hsl(180deg 76% 63%) 58%,
-  hsl(179deg 51% 64%) 69%,
-  hsl(179deg 29% 63%) 79%,
-  hsl(178deg 11% 61%) 89%,
-  hsl(0deg 2% 57%) 100%
-);
+
 
 .main-container {
-  background-image: $bg-gradient;
+  background-image: var(--bg-gradient);
   height: 100vh;
 }
 .choice-container {
@@ -77,6 +64,7 @@ $bg-gradient: linear-gradient(
     width: 225px;
     height: 225px;
   }
+  background: var(--off-white);
   background: $bg-white;
   color: black;
   padding: 8px;
@@ -108,6 +96,7 @@ $bg-gradient: linear-gradient(
   &:hover {
     background-color: black;
     background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);
+    color: var(--bg-white);
     color: $bg-white;
   }
   &.one {

@@ -9,9 +9,10 @@ const PostContextProvider = ({ children }) => {
 
   // ! REST implementation
   useEffect(() => {
-    fetch("http://localhost:5000/feed/posts")
+    fetch("https://social-media-rest.vercel.app/feed/posts")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         setPosts(data);
       })
       .catch((err) => console.log("errors fetching post", err));

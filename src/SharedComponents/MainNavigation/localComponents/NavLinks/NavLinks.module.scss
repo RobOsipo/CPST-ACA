@@ -1,10 +1,12 @@
 $dark-gray: #292929;
 
 .activeStyle {
-  background: #fff;
+  background: rgb(107, 106, 106);
   border-color: $dark-gray;
   color: $dark-gray;
+  
   border-radius: 0px;
+  
 }
 
 .nav-links {
@@ -33,12 +35,6 @@ $dark-gray: #292929;
       border-color: $dark-gray;
       color: $dark-gray;
     }
-
-    .active {
-      background: #fff;
-      border-color: $dark-gray;
-      color: $dark-gray;
-    }
   }
 
   @media (min-width: 768px) {
@@ -51,8 +47,14 @@ $dark-gray: #292929;
     a {
       color: #fff;
       text-decoration: none;
+
+      &:active {
+        color: black;
+      }
     }
   }
+
+ 
 }
 
 .button {
