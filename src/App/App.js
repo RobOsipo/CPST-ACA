@@ -9,7 +9,6 @@ import Compose from "../pages/Compose/Compose";
 import ReadPosts from "../pages/ReadPosts/ReadPosts";
 import ProtectedAuthRoute from "./ProtectedAuthRoute/ProtectedAuthRoute";
 
-import classes from "./App.module.scss";
 
 function App() {
   const reRenderFlag = useSelector((state) => state.flag);
