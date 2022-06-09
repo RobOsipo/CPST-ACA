@@ -105,7 +105,7 @@ const FormInput = (props) => {
     // })
 
     //! REST API implementation
-    fetch(`http://localhost:5000/auth/${props.postEndPoint}`, {
+    fetch(`https://social-media-rest.vercel.app/auth/${props.postEndPoint}`, {
       method: "POST",
       body: JSON.stringify(body),
       headers: {
