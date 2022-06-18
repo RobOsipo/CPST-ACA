@@ -12,7 +12,7 @@ const Dictionary = () => {
             .then(response => response.json())
             .then(data => {
                 setDefinition(data[0].meanings[0].definitions[0].definition)
-            }) // data[0].meanings[0].definitions[0].definition
+            }) 
             .catch(err => console.log('dictionary fucked up', err))
     }
 

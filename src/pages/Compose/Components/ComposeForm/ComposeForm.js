@@ -89,7 +89,7 @@ const ComposeForm = () => {
         </button>
 
         <label className={classes.label} htmlFor="title">
-          Title
+         <span>Title</span>
         </label>
         <input
           name="title"
@@ -99,7 +99,7 @@ const ComposeForm = () => {
         />
 
         <label className={classes.label} htmlFor="title">
-          Image URL
+          <span>Image URL</span>
         </label>
         <input
           name="title"
@@ -109,7 +109,7 @@ const ComposeForm = () => {
         />
 
         <label className={classes.label} htmlFor="title">
-          Created By
+         <span> Created By</span>
         </label>
         <input
           name="title"
@@ -119,7 +119,7 @@ const ComposeForm = () => {
         />
 
         <label className={classes.label} htmlFor="content">
-          Write your Post!
+          <span>Write your Post!</span>
         </label>
         <textarea
           rows="20"
