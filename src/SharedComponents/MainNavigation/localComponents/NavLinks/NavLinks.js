@@ -4,16 +4,16 @@ import { useDispatch } from "react-redux";
 
 import classes from "./NavLinks.module.scss";
 
-
 const NavLinks = (props) => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-    const logoutHandler = () => {
-        document.cookie = "Token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
-        document.cookie = "Registered=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
-        dispatch({ type: 'FLIPFLAG'})
-    }
- 
+  const logoutHandler = () => {
+    document.cookie = "Token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie =
+      "Registered=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    dispatch({ type: "FLIPFLAG" });
+  };
+
   return (
     <ul className={classes["nav-links"]}>
       <li>
@@ -37,7 +37,9 @@ const NavLinks = (props) => {
         </NavLink>
       </li>
       <li className={classes.button}>
-        <button onClick={logoutHandler} className={classes.button}><span className={classes.logout}>Logout</span></button>
+        <button onClick={logoutHandler} className={classes.button}>
+          <span className={classes.logout}>Logout</span>
+        </button>
       </li>
       {/* <li>
         <NavLink
@@ -49,7 +51,6 @@ const NavLinks = (props) => {
           Page 4
         </NavLink>
       </li> */}
-     
     </ul>
   );
 };

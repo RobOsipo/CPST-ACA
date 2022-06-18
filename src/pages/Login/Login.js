@@ -4,8 +4,6 @@ import FormInput from "../../SharedComponents/FormInput/FormInput";
 
 import classes from "./Login.module.scss";
 const Login = () => {
-
-
   return (
     <div className={classes.area}>
       <ul className={classes.circles}>

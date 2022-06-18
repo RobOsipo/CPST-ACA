@@ -7,7 +7,7 @@ import App from './App';
     
         render(<Router><App /></Router>);
       
-        const element = screen.getByText(/Austin Small Business/i)
+        const element = screen.getByText(/Read/i)
       
         expect(element).toBeInTheDocument()
       });

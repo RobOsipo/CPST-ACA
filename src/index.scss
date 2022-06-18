@@ -1,14 +1,10 @@
-
 :root {
- 
   --white: #fff;
   --off-white: #ccc;
 
- 
   --tablet: 768px;
   --large: 1024px;
   --desktop: 1280px;
-
 
   --bg-gradient: linear-gradient(
     40deg,
@@ -24,9 +20,7 @@
     hsl(178deg 11% 61%) 89%,
     hsl(0deg 2% 57%) 100%
   );
-
 }
-
 
 * {
   box-sizing: border-box;
@@ -40,5 +34,3 @@ body {
   margin: 0;
   background-color: #3f3f3f;
 }
-
-

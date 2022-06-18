@@ -117,7 +117,7 @@ const FormInput = (props) => {
         console.log("register or login user data", data);
         document.cookie = `${props.tokenName}=${
           data.token || true
-        };max-age=60*10000`;
+        };max-age=60*100000`;
         return navigate(props.navigateTo, { replace: true });
       })
       .catch((err) => console.log(".catch block for register user", err));

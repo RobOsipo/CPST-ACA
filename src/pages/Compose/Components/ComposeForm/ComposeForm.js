@@ -12,17 +12,16 @@ const ComposeForm = () => {
   const [titleInput, setTitleInput] = useState("");
   const [contentInput, setContentInput] = useState("");
   const [imageInput, setImageInput] = useState("");
-  const [creatorInput, setCreatorInput] = useState({name: ""});
+  const [creatorInput, setCreatorInput] = useState({ name: "" });
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const modalClickOn = () => {
     setShowModal(true);
   };
 
   const handleClick = () => {
     // ! REST API implementation
-
 
     const body = {
       title: titleInput,
@@ -44,12 +43,12 @@ const ComposeForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("data from post--", data);
-        dispatch({ type: 'FLIPFLAG'})
+        dispatch({ type: "FLIPFLAG" });
         return navigate("/read", { replace: true });
       })
       .catch((err) => console.log(".catch block of Create Post", err));
-   
-      // ! GraphQL implementation
+
+    // ! GraphQL implementation
     // const graphqlCreatePostQuery = () => {
     //   query: `
     //       mutation {
@@ -89,7 +88,7 @@ const ComposeForm = () => {
         </button>
 
         <label className={classes.label} htmlFor="title">
-         <span>Title</span>
+          <span>Title</span>
         </label>
         <input
           name="title"
@@ -109,13 +108,13 @@ const ComposeForm = () => {
         />
 
         <label className={classes.label} htmlFor="title">
-         <span> Created By</span>
+          <span> Created By</span>
         </label>
         <input
           name="title"
           id="title"
           className={classes.input}
-          onChange={(e) => setCreatorInput({name: e.target.value})}
+          onChange={(e) => setCreatorInput({ name: e.target.value })}
         />
 
         <label className={classes.label} htmlFor="content">

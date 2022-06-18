@@ -183,9 +183,14 @@ $desktop: 1280px;
   color: white;
   border: none;
   border-radius: 3px;
+  margin-bottom: 0.2rem;
+  transition: all 200ms;
 
   &:hover {
     cursor: pointer;
+    background: transparent;
+    border: solid 1px #fff;
+    transform: scale(1.2);
   }
 }
 
@@ -194,8 +199,13 @@ $desktop: 1280px;
   color: white;
   border: none;
   border-radius: 3px;
+  margin-bottom: 0.2rem;
+  transition: all 200ms;
 
   &:hover {
     cursor: pointer;
+    background: transparent;
+    border: solid 1px #fff;
+    transform: scale(1.2);
   }
 }
